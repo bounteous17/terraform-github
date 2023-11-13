@@ -31,3 +31,17 @@ module "reading-list" {
 
   github_repository_topics = ["reading", "list"]
 }
+
+module "home-lab-rsync-cli" {
+  source = "./templates"
+
+  github_repository = {
+    auto_init  = true
+    name       = "home-lab-rsync-go-cli"
+    visibility = "public"
+  }
+
+  github_branch_protection_count = 0
+
+  github_repository_topics = ["golang", "go", "cli", "rsync", "transfer"]
+}
