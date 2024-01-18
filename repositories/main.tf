@@ -45,3 +45,17 @@ module "ansible-home-lab" {
 
   github_repository_topics = ["ansible", "home-lab", "configs"]
 }
+
+module "home-lab" {
+  source = "./templates"
+
+  github_repository = {
+    auto_init  = true
+    name       = "home-lab"
+    visibility = "public"
+  }
+
+  github_branch_protection_count = 0
+
+  github_repository_topics = ["home-lab", "docs"]
+}
