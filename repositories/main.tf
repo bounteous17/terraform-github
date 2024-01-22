@@ -59,3 +59,31 @@ module "home-lab" {
 
   github_repository_topics = ["home-lab", "docs"]
 }
+
+module "qemu-custom-builds" {
+  source = "./templates"
+
+  github_repository = {
+    auto_init  = true
+    name       = "qemu-custom-builds"
+    visibility = "public"
+  }
+
+  github_branch_protection_count = 0
+
+  github_repository_topics = ["qemu", "build"]
+}
+
+module "helm-home-lab" {
+  source = "./templates"
+
+  github_repository = {
+    auto_init  = true
+    name       = "helm-home-lab"
+    visibility = "public"
+  }
+
+  github_branch_protection_count = 0
+
+  github_repository_topics = ["home-lab", "helm", "k8s", "kubernetes"]
+}
