@@ -101,3 +101,17 @@ module "bash-scripts" {
 
   github_repository_topics = ["bash", "scripts"]
 }
+
+module "terraform-home-lab" {
+  source = "./templates"
+
+  github_repository = {
+    auto_init  = true
+    name       = "terraform-home-lab"
+    visibility = "public"
+  }
+
+  github_branch_protection_count = 0
+
+  github_repository_topics = ["home-lab", "terraform"]
+}
