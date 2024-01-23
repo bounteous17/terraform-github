@@ -87,3 +87,17 @@ module "helm-home-lab" {
 
   github_repository_topics = ["home-lab", "helm", "k8s", "kubernetes"]
 }
+
+module "bash-scripts" {
+  source = "./templates"
+
+  github_repository = {
+    auto_init  = true
+    name       = "bash-scripts"
+    visibility = "public"
+  }
+
+  github_branch_protection_count = 0
+
+  github_repository_topics = ["bash", "scripts"]
+}
