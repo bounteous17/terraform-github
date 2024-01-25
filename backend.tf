@@ -3,7 +3,7 @@ terraform {
     organization = "Bounteous17"
 
     workspaces {
-      name = "personal"
+      name = "github"
     }
   }
 
