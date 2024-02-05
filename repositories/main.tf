@@ -115,3 +115,17 @@ module "terraform-home-lab" {
 
   github_repository_topics = ["home-lab", "terraform"]
 }
+
+module "docker-images" {
+  source = "./templates"
+
+  github_repository = {
+    auto_init  = true
+    name       = "docker-images"
+    visibility = "public"
+  }
+
+  github_branch_protection_count = 0
+
+  github_repository_topics = ["docker"]
+}
