@@ -143,3 +143,14 @@ module "helm-chart-qbittorrent" {
 
   github_repository_topics = ["docker", "helm", "chart", "kubernetes"]
 }
+
+module "notes-ultimate-aws-certified-sysops-administrator" {
+  source = "./templates"
+  github_repository = {
+    auto_init  = true
+    name       = "notes-ultimate-aws-certified-sysops-administrator"
+    visibility = "public"
+  }
+  github_branch_protection_count = 0
+  github_repository_topics = ["aws", "notes", "certification", "sysops", "udemy"]
+}
