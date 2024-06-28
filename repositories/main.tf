@@ -129,3 +129,17 @@ module "docker-images" {
 
   github_repository_topics = ["docker"]
 }
+
+module "helm-chart-qbittorrent" {
+  source = "./templates"
+
+  github_repository = {
+    auto_init  = true
+    name       = "helm-chart-qbittorrent"
+    visibility = "public"
+  }
+
+  github_branch_protection_count = 0
+
+  github_repository_topics = ["docker", "helm", "chart", "kubernetes"]
+}
