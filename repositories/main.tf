@@ -154,3 +154,14 @@ module "notes-ultimate-aws-certified-sysops-administrator" {
   github_branch_protection_count = 0
   github_repository_topics = ["aws", "notes", "certification", "sysops", "udemy"]
 }
+
+module "kubernetes-terraform-home-lab" {
+  source = "./templates"
+  github_repository = {
+    auto_init  = true
+    name       = "kubernetes-terraform-home-lab"
+    visibility = "public"
+  }
+  github_branch_protection_count = 0
+  github_repository_topics = ["k8s", "helm", "home-lab", "kubernetes", "terraform"]
+}
