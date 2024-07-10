@@ -166,13 +166,13 @@ module "kubernetes-terraform-home-lab" {
   github_repository_topics = ["k8s", "helm", "home-lab", "kubernetes", "terraform"]
 }
 
-module "vue-poc" {
+module "vue-home-lab-page" {
   source = "./templates"
   github_repository = {
     auto_init  = true
-    name       = "vue-poc"
-    visibility = "private"
+    name       = "vue-home-lab-page"
+    visibility = "public"
   }
   github_branch_protection_count = 0
-  github_repository_topics = ["vue", "poc", "typescript", "node"]
+  github_repository_topics = ["vue", "home-lab", "typescript", "node"]
 }
