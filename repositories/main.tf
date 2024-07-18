@@ -176,3 +176,14 @@ module "vue-home-lab-page" {
   github_branch_protection_count = 0
   github_repository_topics = ["vue", "home-lab", "typescript", "node"]
 }
+
+module "react-home-lab-page" {
+  source = "./templates"
+  github_repository = {
+    auto_init  = true
+    name       = "react-home-lab-page"
+    visibility = "private"
+  }
+  github_branch_protection_count = 0
+  github_repository_topics = ["react", "home-lab", "typescript", "node"]
+}
