@@ -60,20 +60,6 @@ module "home-lab" {
   github_repository_topics = ["home-lab", "docs"]
 }
 
-module "helm-chart-qbittorrent" {
-  source = "./templates"
-
-  github_repository = {
-    auto_init  = true
-    name       = "helm-chart-qbittorrent"
-    visibility = "public"
-  }
-
-  github_branch_protection_count = 0
-
-  github_repository_topics = ["docker", "helm", "chart", "kubernetes"]
-}
-
 module "react-home-lab-page" {
   source = "./templates"
   github_repository = {
