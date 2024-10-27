@@ -60,76 +60,6 @@ module "home-lab" {
   github_repository_topics = ["home-lab", "docs"]
 }
 
-module "qemu-custom-builds" {
-  source = "./templates"
-
-  github_repository = {
-    auto_init  = true
-    name       = "qemu-custom-builds"
-    visibility = "public"
-  }
-
-  github_branch_protection_count = 0
-
-  github_repository_topics = ["qemu", "build"]
-}
-
-module "helm-home-lab" {
-  source = "./templates"
-
-  github_repository = {
-    auto_init  = true
-    name       = "helm-home-lab"
-    visibility = "public"
-  }
-
-  github_branch_protection_count = 0
-
-  github_repository_topics = ["home-lab", "helm", "k8s", "kubernetes"]
-}
-
-module "bash-scripts" {
-  source = "./templates"
-
-  github_repository = {
-    auto_init  = true
-    name       = "bash-scripts"
-    visibility = "public"
-  }
-
-  github_branch_protection_count = 0
-
-  github_repository_topics = ["bash", "scripts"]
-}
-
-module "terraform-home-lab" {
-  source = "./templates"
-
-  github_repository = {
-    auto_init  = true
-    name       = "terraform-home-lab"
-    visibility = "public"
-  }
-
-  github_branch_protection_count = 0
-
-  github_repository_topics = ["home-lab", "terraform"]
-}
-
-module "docker-images" {
-  source = "./templates"
-
-  github_repository = {
-    auto_init  = true
-    name       = "docker-images"
-    visibility = "public"
-  }
-
-  github_branch_protection_count = 0
-
-  github_repository_topics = ["docker"]
-}
-
 module "helm-chart-qbittorrent" {
   source = "./templates"
 
@@ -144,39 +74,6 @@ module "helm-chart-qbittorrent" {
   github_repository_topics = ["docker", "helm", "chart", "kubernetes"]
 }
 
-module "notes-ultimate-aws-certified-sysops-administrator" {
-  source = "./templates"
-  github_repository = {
-    auto_init  = true
-    name       = "notes-ultimate-aws-certified-sysops-administrator"
-    visibility = "public"
-  }
-  github_branch_protection_count = 0
-  github_repository_topics = ["aws", "notes", "certification", "sysops", "udemy"]
-}
-
-module "kubernetes-terraform-home-lab" {
-  source = "./templates"
-  github_repository = {
-    auto_init  = true
-    name       = "kubernetes-terraform-home-lab"
-    visibility = "public"
-  }
-  github_branch_protection_count = 0
-  github_repository_topics = ["k8s", "helm", "home-lab", "kubernetes", "terraform"]
-}
-
-module "vue-home-lab-page" {
-  source = "./templates"
-  github_repository = {
-    auto_init  = true
-    name       = "vue-home-lab-page"
-    visibility = "public"
-  }
-  github_branch_protection_count = 0
-  github_repository_topics = ["vue", "home-lab", "typescript", "node"]
-}
-
 module "react-home-lab-page" {
   source = "./templates"
   github_repository = {
@@ -185,5 +82,15 @@ module "react-home-lab-page" {
     visibility = "private"
   }
   github_branch_protection_count = 0
-  github_repository_topics = ["react", "home-lab", "typescript", "node"]
+  github_repository_topics       = ["react", "home-lab", "typescript", "node"]
+}
+
+module "bounteous17" {
+  source = "./templates"
+  github_repository = {
+    auto_init  = true
+    name       = "Bounteous17"
+    visibility = "public"
+  }
+  github_branch_protection_count = 0
 }
