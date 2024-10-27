@@ -74,8 +74,8 @@ module "react-home-lab-page" {
 module "bounteous17" {
   source = "./templates"
   github_repository = {
-    auto_init  = true
-    name       = "Bounteous17"
+    auto_init  = false
+    name       = "bounteous17"
     visibility = "public"
   }
   github_branch_protection_count = 0

@@ -1,11 +1,11 @@
 terraform {
   cloud {
-    organization = "Bounteous17"
+    organization = "bounteous17"
 
     workspaces {
       name = "github"
     }
   }
 
-  required_version = ">= 1.1.2"
+  required_version = ">= 1.9.8"
 }
