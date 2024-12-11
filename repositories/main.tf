@@ -80,3 +80,14 @@ module "bounteous17" {
   }
   github_branch_protection_count = 0
 }
+
+module "padel-app" {
+  source = "./templates"
+  github_repository = {
+    auto_init  = true
+    name       = "padel-app"
+    visibility = "private"
+  }
+  github_branch_protection_count = 0
+  github_repository_topics       = ["react", "typescript", "node"]
+}
