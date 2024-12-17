@@ -91,3 +91,14 @@ module "padel-app" {
   github_branch_protection_count = 0
   github_repository_topics       = ["react", "typescript", "node"]
 }
+
+module "home-lab-nexus" {
+  source = "./templates"
+  github_repository = {
+    auto_init  = true
+    name       = "home-lab-nexus"
+    visibility = "public"
+  }
+  github_branch_protection_count = 0
+  github_repository_topics       = ["home-lab", "docs"]
+}
