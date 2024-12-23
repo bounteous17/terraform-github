@@ -102,3 +102,14 @@ module "home-lab-nexus" {
   github_branch_protection_count = 0
   github_repository_topics       = ["home-lab", "docs"]
 }
+
+module "ia-conversations" {
+  source = "./templates"
+  github_repository = {
+    auto_init  = true
+    name       = "ia-conversations"
+    visibility = "public"
+  }
+  github_branch_protection_count = 0
+  github_repository_topics       = ["ia", "conversations"]
+}
